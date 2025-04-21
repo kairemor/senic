@@ -19,12 +19,33 @@ export type Service = {
 export type Testimonial = {
   id: number;
   name: string;
-  role: string;
+  position: string;
   company: string;
   image: string;
   rating: number;
-  quote: string;
+  content: string;
 };
+export interface HeroSection {
+  headline: string;
+  subheading: string;
+  description: string;
+  cta: string;
+}
+
+export interface ServiceSection {
+  title: string;
+  subtitle: string;
+  services: Service[];
+}
+
+export interface AboutSection {
+  title: string;
+  description: string;
+  longDescription: string;
+  image: string;
+  stats: { value: string; label: string }[];
+  cta: string;
+}
 
 export const siteConfig = {
   name: "SENEGAL INGENIERIE ET CONSEILS",
@@ -52,7 +73,7 @@ export const navigationLinks = [
   { name: "Contact", href: "#contact" },
 ];
 
-export const heroSection = {
+export const heroSection: HeroSection = {
   headline: "SENEGAL INGENIERIE ET CONSEILS (S.E.N.I.C.)",
   subheading: "Votre partenaire de confiance pour l'excellence technique",
   description:
@@ -60,7 +81,7 @@ export const heroSection = {
   cta: "En savoir plus",
 };
 
-export const aboutSection = {
+export const aboutSection: AboutSection = {
   title: "About Us",
   description:
     "SENIC est un cabinet d'ingénierie sénégalais spécialisé dans l'étude, la conception et la gestion de projets de construction. Notre expertise couvre tous les aspects de l'ingénierie, de l'étude de faisabilité à la réalisation finale.",
@@ -76,7 +97,7 @@ export const aboutSection = {
   cta: "En savoir plus",
 };
 
-export const servicesSection = {
+export const servicesSection: ServiceSection = {
   title: "Nos Services",
   subtitle:
     "Des solutions d'ingénierie complètes pour chaque phase de votre projet",
@@ -149,38 +170,164 @@ export const servicesSection = {
   ],
 };
 
-export const testimonials: Testimonial[] = [
-  {
-    id: 1,
-    name: "Amadou Diallo",
-    role: "Directeur de Projet",
-    company: "Construction Dakar SA",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=200&h=200",
-    rating: 5,
-    quote:
-      "SENIC a démontré une expertise exceptionnelle dans la gestion de notre projet d'infrastructure. Leur équipe professionnelle a dépassé nos attentes.",
+export interface TestimonialSection {
+  title: string;
+  subtitle: string;
+  testimonials: Testimonial[];
+}
+
+export const testimonialsSection: TestimonialSection = {
+  title: "Ce que disent nos clients",
+  subtitle: "Témoignages",
+  testimonials: [
+    {
+      id: 1,
+      name: "Amadou Diallo",
+      position: "Directeur de Projet",
+      company: "Construction Dakar SA",
+      image:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=200&h=200",
+      rating: 5,
+      content:
+        "SENIC a démontré une expertise exceptionnelle dans la gestion de notre projet d'infrastructure. Leur équipe professionnelle a dépassé nos attentes.",
+    },
+    {
+      id: 2,
+      name: "Marie Sow",
+      position: "Architecte en Chef",
+      company: "Modern Build Senegal",
+      image:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&w=200&h=200",
+      rating: 5,
+      content:
+        "La collaboration avec SENIC a été déterminante pour le succès de nos projets. Leur expertise technique et leur professionnalisme sont remarquables.",
+    },
+    {
+      id: 3,
+      name: "Ibrahim Ndiaye",
+      position: "Directeur Général",
+      company: "Industrie Plus",
+      image:
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?fit=crop&w=200&h=200",
+      rating: 5,
+      content:
+        "Une équipe d'experts qui comprend vraiment les enjeux de l'industrie au Sénégal. Leur approche innovante a transformé notre production.",
+    },
+  ],
+};
+
+export interface FooterSection {
+  companyDescription: string;
+  quickLinks: string;
+  services: string;
+  contact: string;
+  newsletter: {
+    title: string;
+    placeholder: string;
+    button: string;
+  };
+  copyright: string;
+  socialMedia: {
+    name: string;
+    icon: string;
+    url: string;
+  }[];
+}
+
+export const footerSection: FooterSection = {
+  companyDescription:
+    "Cabinet d'ingénierie spécialisé dans l'étude, la conception et la gestion de projets de construction.",
+  quickLinks: "Liens Rapides",
+  services: "Services",
+  contact: "Contact",
+  newsletter: {
+    title: "Newsletter",
+    placeholder: "Votre email",
+    button: "S'abonner",
   },
-  {
-    id: 2,
-    name: "Marie Sow",
-    role: "Architecte en Chef",
-    company: "Modern Build Senegal",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&w=200&h=200",
-    rating: 5,
-    quote:
-      "La collaboration avec SENIC a été déterminante pour le succès de nos projets. Leur expertise technique et leur professionnalisme sont remarquables.",
+  copyright: "© 2025 SENEGAL INGENIERIE ET CONSEILS. Tous droits réservés.",
+  socialMedia: [
+    { name: "Facebook", icon: "facebook", url: "#" },
+    { name: "Twitter", icon: "twitter", url: "#" },
+    { name: "LinkedIn", icon: "linkedin", url: "#" },
+    { name: "Instagram", icon: "instagram", url: "#" },
+  ],
+};
+
+export interface ContactSection {
+  title: string;
+  subtitle: string;
+  address: {
+    street: string;
+    city: string;
+    country: string;
+  };
+  phone: string;
+  email: string;
+  formFields: {
+    name: {
+      label: string;
+      placeholder: string;
+    };
+    email: {
+      label: string;
+      placeholder: string;
+    };
+    phone: {
+      placeholder: string;
+    };
+    subject: {
+      label: string;
+      placeholder: string;
+    };
+    message: {
+      label: string;
+      placeholder: string;
+    };
+    submit: {
+      text: string;
+    };
+  };
+  mapLocation: {
+    lat: number;
+    lng: number;
+  };
+}
+
+export const contactSection: ContactSection = {
+  title: "Contactez-nous",
+  subtitle: "Parlons de votre projet",
+  address: {
+    street: "123 Rue Félix Faure",
+    city: "Dakar",
+    country: "Sénégal",
   },
-  {
-    id: 3,
-    name: "Ibrahim Ndiaye",
-    role: "Directeur Général",
-    company: "Industrie Plus",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?fit=crop&w=200&h=200",
-    rating: 5,
-    quote:
-      "Une équipe d'experts qui comprend vraiment les enjeux de l'industrie au Sénégal. Leur approche innovante a transformé notre production.",
+  phone: "+221 33 123 45 67",
+  email: "contact@senic.sn",
+  formFields: {
+    name: {
+      label: "Nom",
+      placeholder: "Votre nom",
+    },
+    email: {
+      label: "Email",
+      placeholder: "Votre email",
+    },
+    phone: {
+      placeholder: "Votre numéro",
+    },
+    subject: {
+      label: "Sujet",
+      placeholder: "Sujet de votre message",
+    },
+    message: {
+      label: "Message",
+      placeholder: "Votre message",
+    },
+    submit: { text: "Envoyer" },
   },
-];
+  mapLocation: {
+    lat: 14.6937,
+    lng: -17.4441,
+  },
+};
