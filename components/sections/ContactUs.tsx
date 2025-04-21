@@ -25,8 +25,6 @@ export default function ContactUs({ data }: ContactSectionProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  // Skip TypeScript type checking for this file
-  // @ts-nocheck
   const getLabel = (field: keyof typeof data.formFields): string => {
     const formField = data.formFields[field];
     return "label" in formField && typeof formField.label === "string"
@@ -34,7 +32,6 @@ export default function ContactUs({ data }: ContactSectionProps) {
       : "";
   };
 
-  // @ts-nocheck
   const getPlaceholder = (field: keyof typeof data.formFields) => {
     const formField = data.formFields[field];
     return "placeholder" in formField &&

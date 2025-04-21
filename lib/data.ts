@@ -81,6 +81,32 @@ export const heroSection: HeroSection = {
   cta: "En savoir plus",
 };
 
+export const heroSection2 = {
+  headline: "SERVICES D'INGÉNIERIE PROFESSIONNELS",
+  subheading: "Votre partenaire de confiance pour l'excellence technique",
+  cta: "En savoir plus",
+  backgroundImage:
+    "https://images.unsplash.com/photo-1487611459768-bd414656ea10?q=80&w=2560&auto=format&fit=crop",
+  slides: [
+    {
+      id: 1,
+      headline: "SERVICES D'INGÉNIERIE PROFESSIONNELS",
+      subheading: "Votre partenaire de confiance pour l'excellence technique",
+    },
+    {
+      id: 2,
+      headline: "SOLUTIONS TECHNIQUES INNOVANTES",
+      subheading: "Des approches sur mesure pour vos projets de construction",
+    },
+    {
+      id: 3,
+      headline: "EXPERTISE MULTIDISCIPLINAIRE",
+      subheading:
+        "Une équipe dédiée pour accompagner chaque étape de votre projet",
+    },
+  ],
+};
+
 export const aboutSection: AboutSection = {
   title: "About Us",
   description:
