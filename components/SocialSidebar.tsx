@@ -13,13 +13,23 @@ export default function SocialSidebar() {
   const socialLinks = [
     {
       icon: MessageCircleMore,
-      label: "Share on Whatsapp",
-      url: "#",
+      label: "Connect on Whatsapp",
+      url: "https://wa.me/221764871740",
       color: "#18ff62",
     },
-    { icon: Facebook, label: "Share on Facebook", url: "#", color: "#1877f2" },
-    { icon: Twitter, label: "Share on Twitter", url: "#", color: "#1da1f2" },
-    { icon: Linkedin, label: "Share on LinkedIn", url: "#", color: "#0077b5" },
+    {
+      icon: Facebook,
+      label: "Connect on Facebook",
+      url: "#",
+      color: "#1877f2",
+    },
+    { icon: Twitter, label: "Connect on Twitter", url: "#", color: "#1da1f2" },
+    {
+      icon: Linkedin,
+      label: "Connect on LinkedIn",
+      url: "#",
+      color: "#0077b5",
+    },
     { icon: Share2, label: "Share", url: "#", color: "#ff4500" },
   ];
 

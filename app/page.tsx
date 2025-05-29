@@ -57,8 +57,8 @@ export default function Home() {
       <main className="flex min-h-screen flex-col">
         <SocialSidebar />
         {/* Hero Section */}
-        {/* <Hero data={heroSection} /> */}
-        <HeroSection data={heroSection2} scrollY={scrollY} />
+        <Hero data={heroSection} />
+        {/* <HeroSection data={heroSection2} scrollY={scrollY} /> */}
         {/* Services Section */}
         <Services data={servicesSection} />
         {/* About Section */}

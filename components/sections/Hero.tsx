@@ -1,6 +1,7 @@
 import { HeroSection } from "@/lib/data";
 import React from "react";
 import { Button } from "../ui/button";
+import WhatsAppBusinessButton from "../Whatsapp";
 
 function Hero({ data }: { data: HeroSection }) {
   return (
@@ -28,12 +29,13 @@ function Hero({ data }: { data: HeroSection }) {
           {data.subheading}
         </p>
         <div className="mt-10 animate-fade-up [animation-delay:400ms]">
-          <Button
+          {/* <Button
             size="lg"
             className="bg-primary text-primary-foreground hover:bg-primary/90"
           >
             {data.cta}
-          </Button>
+          </Button> */}
+          <WhatsAppBusinessButton />
         </div>
       </div>
 

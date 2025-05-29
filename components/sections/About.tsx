@@ -27,11 +27,11 @@ function About({ data }: { data: AboutSection }) {
           </motion.div>
 
           {/* Right side - Content */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+          <div
+            // initial={{ opacity: 0, x: 50 }}
+            // whileInView={{ opacity: 1, x: 0 }}
+            // viewport={{ once: true }}
+            // transition={{ duration: 0.5 }}
             className="flex flex-col justify-center"
           >
             <SectionHeading
@@ -73,7 +73,7 @@ function About({ data }: { data: AboutSection }) {
             >
               {data.cta}
             </Button>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

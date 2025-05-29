@@ -7,6 +7,7 @@ import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Testimonial, TestimonialSection } from "@/lib/data";
+import { SectionHeading } from "../ui/section-heading";
 
 interface TestimonialsSectionProps {
   data: TestimonialSection;
@@ -146,9 +147,15 @@ export default function Testimonials({ data }: TestimonialsSectionProps) {
         >
           {/* Section Header */}
           <motion.div variants={headerVariants} className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            {/* <h2 className="text-3xl md:text-4xl font-bold mb-4">
               {getTitle()}
-            </h2>
+            </h2> */}
+            <SectionHeading
+              title={getTitle()}
+              align="center"
+              splitTitle={true}
+              className="mb-6"
+            />
             <p className="text-gray-600 max-w-xl mx-auto">{getSubtitle()}</p>
           </motion.div>
 
@@ -173,7 +180,7 @@ export default function Testimonials({ data }: TestimonialsSectionProps) {
                   <div className="flex-shrink-0">
                     <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden border-4 border-primary/20">
                       <Image
-                        src="/api/placeholder/100/100" // Placeholder image
+                        src={data.testimonials[currentSlide].image} // Placeholder image
                         alt={data.testimonials[currentSlide].name}
                         width={100}
                         height={100}

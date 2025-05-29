@@ -13,7 +13,11 @@ export type Service = {
   title: string;
   description: string;
   icon: typeof LucideIcon;
-  items: string[];
+  items: {
+    id: number;
+    title: string;
+    description: string;
+  }[];
 };
 
 export type Testimonial = {
@@ -53,14 +57,15 @@ export const siteConfig = {
   description:
     "Cabinet d'ingénierie spécialisé dans l'étude, la conception et la gestion de projets de construction",
   contact: {
-    email: "contact@senic.sn",
-    phone: "+221 33 xxx xxxx",
-    address: "Dakar, Senegal",
+    email: "senicconsultance@gmail.com",
+    phone: "+221 76 487 17 40",
+    address: "Mbour - Somone Canda, Senegal",
   },
   social: {
     linkedin: "https://linkedin.com/company/senic",
     twitter: "https://twitter.com/senic",
     facebook: "https://facebook.com/senic",
+    whatsapp: "https://wa.me/221764871740",
   },
 };
 
@@ -108,15 +113,26 @@ export const heroSection2 = {
 };
 
 export const aboutSection: AboutSection = {
-  title: "About Us",
-  description:
-    "SENIC est un cabinet d'ingénierie sénégalais spécialisé dans l'étude, la conception et la gestion de projets de construction. Notre expertise couvre tous les aspects de l'ingénierie, de l'étude de faisabilité à la réalisation finale.",
-  longDescription:
-    "Avec plus de 15 ans d'expérience dans le secteur, nous avons développé une expertise pointue dans la gestion de projets complexes. Notre équipe d'ingénieurs qualifiés s'engage à fournir des solutions innovantes et durables, adaptées aux besoins spécifiques de chaque client. Nous mettons l'accent sur la qualité, la sécurité et l'efficacité dans tous nos projets.",
+  title: "A propos de nous (S.E.N.I.C.)",
+  description: `SENEGAL INGENIERIE ET CONSEILS (S.E.N.I.C.) est un cabinet d’ingénierie spécialisé dans
+l’étude, la conception et la gestion de projets de construction. Fort d’une expertise multidisciplinaire,
+nous accompagnons nos clients à chaque étape de leurs projets, en assurant des solutions techniques
+adaptées, innovantes et durables.`,
+  longDescription: `Notre approche repose sur une vision globale intégrant la faisabilité technique, l’optimisation des coûts
+et la gestion efficace des risques. Nous mettons à disposition des maîtres d’ouvrage, entreprises et
+institutions, un ensemble de services couvrant les études de conception, le suivi et la gestion de
+chantier, le conseil technique, l’audit de structures, le contrôle qualité et la formation.
+Notre mission est d’assurer la réussite des projets en garantissant leur conformité aux normes, leur
+viabilité financière et leur impact durable. Grâce à une méthodologie rigoureuse et des outils
+technologiques avancés tels que le BIM et la modélisation 3D, nous offrons des solutions performantes
+pour sécuriser les investissements et optimiser les ressources.
+S.E.N.I.C. se positionne ainsi comme un partenaire de confiance pour la réalisation de projets
+d’infrastructure et de bâtiment, en alliant expertise technique, innovation et engagement envers la
+qualité et la durabilité.`,
   image:
     "https://www.ateliercplusm.com/wp-content/uploads/2020/11/conseil-en-ingenierie-1-scaled.jpeg",
   stats: [
-    { value: "15+", label: "Années d'expérience" },
+    { value: "3+", label: "Années d'expérience" },
     { value: "200+", label: "Projets réalisés" },
     { value: "50+", label: "Experts qualifiés" },
   ],
@@ -135,9 +151,30 @@ export const servicesSection: ServiceSection = {
       description:
         "Études de faisabilité, conception structurelle et documentation technique pour projets de construction.",
       items: [
-        "Études de faisabilité",
-        "Conception structurelle",
-        "Documentation technique",
+        {
+          id: 1,
+          title: "Études de faisabilité :",
+          description:
+            "Analyse des contraintes techniques, environnementales et financières avant le lancement d’un projet.",
+        },
+        {
+          id: 2,
+          title: "Conception structurelle :",
+          description:
+            "Dimensionnement des structures (bâtiments, ponts, routes) en fonction des normes locales et internationales.",
+        },
+        {
+          id: 3,
+          title: "Plans d’exécution et dessins techniques :",
+          description:
+            "Élaboration des plans détaillés pour la construction (béton armé, charpentes métalliques, fondations).",
+        },
+        {
+          id: 4,
+          title: "Modélisation 3D et BIM (Building Information Modeling) :",
+          description:
+            "Visualisation des projets en 3D pour faciliter la coordination entre les différentes parties prenantes.",
+        },
       ],
     },
     {
@@ -145,11 +182,33 @@ export const servicesSection: ServiceSection = {
       title: "Gestion de Projet et Suivi de Chantier",
       icon: Building2,
       description:
-        "Solutions complètes pour les projets d'infrastructure et de construction.",
+        "Planification et gestion des ressources, Suivi et coordination de chantier, Gestion des appels d’offres et des contrats, Gestion des risques",
       items: [
-        "Construction de bâtiments",
-        "Infrastructures routières",
-        "Ouvrages d'art",
+        {
+          id: 1,
+          title: "Planification et gestion des ressources :",
+
+          description:
+            "Élaboration des plannings de travaux, gestion des équipes, allocation des ressources matérielles et humaines.",
+        },
+        {
+          id: 2,
+          title: "Suivi et coordination de chantier :",
+          description:
+            "Supervision quotidienne des travaux, contrôle qualité, respect des délais et des budgets.",
+        },
+        {
+          id: 3,
+          title: "Gestion des appels d’offres et des contrats :",
+          description:
+            "Rédaction des cahiers des charges, analyse des offres, négociation, rédaction et suivi des contrats.",
+        },
+        {
+          id: 4,
+          title: "Gestion des risques :",
+          description:
+            "Identification et anticipation des risques techniques, financiers ou environnementaux.",
+        },
       ],
     },
     {
@@ -157,11 +216,32 @@ export const servicesSection: ServiceSection = {
       title: "Conseil et Assistance Technique",
       icon: Factory,
       description:
-        "Optimisation des processus industriels et conception d'installations.",
+        "Assistance à maîtrise d’ouvrage (AMO), Expertise technique et audit de structures, Optimisation des coûts et des matériaux, Conseil en construction durable",
       items: [
-        "Conception d'usines",
-        "Optimisation de processus",
-        "Sécurité industrielle",
+        {
+          id: 1,
+          title: "Assistance à maîtrise d’ouvrage (AMO) :",
+          description:
+            "Accompagnement du client dans la prise de décision technique et financière tout au long du projet.",
+        },
+        {
+          id: 2,
+          title: "Expertise technique et audit de structures :",
+          description:
+            "Vérification de la conformité des ouvrages existants et recommandations pour des améliorations ou des réparations.",
+        },
+        {
+          id: 3,
+          title: "Optimisation des coûts et des matériaux :",
+          description:
+            "Propositions de solutions techniques pour réduire les coûts sans compromettre la qualité.",
+        },
+        {
+          id: 4,
+          title: "Conseil en construction durable :",
+          description:
+            "Intégration de matériaux écologiques et de solutions énergétiques durables dans les projets.",
+        },
       ],
     },
     {
@@ -170,28 +250,67 @@ export const servicesSection: ServiceSection = {
       icon: Wrench,
       description: "Conception et maintenance d'équipements mécaniques.",
       items: [
-        "Conception mécanique",
-        "Maintenance préventive",
-        "Optimisation énergétique",
+        {
+          id: 1,
+          title: "Audits techniques :",
+          description: `Effectuer des inspections et audits techniques pour évaluer l'état des bâtiments et des
+infrastructures existantes.`,
+        },
+        {
+          id: 2,
+          title: "Diagnostics de structures :",
+          description:
+            "Identifier les défauts structurels ou les risques potentiels et recommander des actions correctives.",
+        },
       ],
     },
     {
       id: 5,
       title: "Contrôle et Qualité",
       icon: Flask,
-      description: "Analyses et études pour l'industrie chimique.",
+      description:
+        "Contrôle technique des matériaux, Vérification de la conformité aux normes et Gestion des non-conformités et levée des réserves",
       items: [
-        "Analyses de matériaux",
-        "Études environnementales",
-        "Contrôle qualité",
+        {
+          id: 1,
+          title: "Contrôle technique des matériaux:",
+          description:
+            "Tests en laboratoire ou sur site pour garantir la qualité des matériaux utilisés (béton, acier, etc.).",
+        },
+        {
+          id: 2,
+          title: "Vérification de la conformité aux normes :",
+          description:
+            "nspections pour s’assurer que les travaux respectent les réglementations locales et internationales.",
+        },
+        {
+          id: 3,
+          title: "Gestion des non-conformités et levée des réserves :",
+          description: `Suivi des corrections à apporter en cas de
+défaillance identifiée lors des inspections.`,
+        },
       ],
     },
     {
       id: 6,
       title: "Formation et Sensibilisation",
       icon: Users,
-      description: "Coordination et suivi complet de projets d'ingénierie.",
-      items: ["Planification", "Coordination d'équipes", "Suivi budgétaire"],
+      description:
+        "Formation des équipes sur site  et Des Séminaires sur la gestion de projet et la sécurité en chantier",
+      items: [
+        {
+          id: 1,
+          title: "Formation des équipes sur site :",
+          description: `Sessions de formation pour les ouvriers, techniciens et autres
+professionnels sur les bonnes pratiques de construction.`,
+        },
+        {
+          id: 2,
+          title: "Séminaires sur la gestion de projet et la sécurité :",
+          description: `Organisation de formations pour les chefs de projet
+ou les décideurs sur la gestion efficace des chantiers et la sécurité.`,
+        },
+      ],
     },
   ],
 };
@@ -208,36 +327,43 @@ export const testimonialsSection: TestimonialSection = {
   testimonials: [
     {
       id: 1,
-      name: "Amadou Diallo",
-      position: "Directeur de Projet",
-      company: "Construction Dakar SA",
+      name: "Moussa S",
+      position: "Particulier",
+      company: "",
       image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=200&h=200",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0mStgAq6UphPdQDqvAGbl9Usi9LSqi1-URQ&s",
       rating: 5,
-      content:
-        "SENIC a démontré une expertise exceptionnelle dans la gestion de notre projet d'infrastructure. Leur équipe professionnelle a dépassé nos attentes.",
+      content: `J’avais une idée précise du style que je voulais pour ma maison, entre modernité et fonctionnalité. L’équipe de SENIC a su écouter mes besoins et me proposer une conception architecturale à la fois élégante, bien pensée et parfaitement adaptée à mon terrain. Chaque espace a été optimisé, et le rendu final dépasse mes attentes. On sent que c’est un cabinet qui maîtrise à la fois l’esthétique et la technique.`,
     },
     {
       id: 2,
-      name: "Marie Sow",
-      position: "Architecte en Chef",
-      company: "Modern Build Senegal",
+      name: "Oumou StLouis",
+      position: "Promotrice immobilière",
+      company: "",
       image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&w=200&h=200",
+        "https://static.vecteezy.com/system/resources/previews/042/332/098/non_2x/default-avatar-profile-icon-grey-photo-placeholder-female-no-photo-images-for-unfilled-user-profile-greyscale-illustration-for-socail-media-web-vector.jpg",
       rating: 5,
-      content:
-        "La collaboration avec SENIC a été déterminante pour le succès de nos projets. Leur expertise technique et leur professionnalisme sont remarquables.",
+      content: `SENIC ne se contente pas de faire des plans, ils accompagnent vraiment leurs clients. Grâce à eux, j’ai pu constituer un dossier technique solide pour ma banque, avec des plans bien détaillés, un chiffrage précis et un dossier de montage cohérent. Leur expertise a grandement facilité l’obtention de mon crédit immobilier. Franchement, c’est un soutien qu’on ne trouve pas partout. `,
     },
     {
       id: 3,
-      name: "Ibrahim Ndiaye",
-      position: "Directeur Général",
-      company: "Industrie Plus",
+      name: "OUSMANE S.",
+      position: "Particulier",
+      company: "",
       image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?fit=crop&w=200&h=200",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0mStgAq6UphPdQDqvAGbl9Usi9LSqi1-URQ&s",
       rating: 5,
-      content:
-        "Une équipe d'experts qui comprend vraiment les enjeux de l'industrie au Sénégal. Leur approche innovante a transformé notre production.",
+      content: `Ce que j’ai particulièrement apprécié, c’est leur rigueur sur la gestion des coûts et des quantités. SENIC m’a fourni un métré précis, un plan béton armé détaillé, et même des conseils pour l’approvisionnement en matériaux. Résultat : pas de surprise sur le chantier, et tout s’est déroulé dans le respect du budget. C’est une vraie tranquillité d’esprit.`,
+    },
+    {
+      id: 4,
+      name: "Cliente Résidentielle",
+      position: "Particulier",
+      company: "",
+      image:
+        "https://static.vecteezy.com/system/resources/previews/042/332/098/non_2x/default-avatar-profile-icon-grey-photo-placeholder-female-no-photo-images-for-unfilled-user-profile-greyscale-illustration-for-socail-media-web-vector.jpg",
+      rating: 5,
+      content: `Travailler avec SENIC, c’est comme avoir un partenaire de confiance à ses côtés. Ils sont disponibles, à l’écoute, et réactifs à chaque étape du projet. Même après le démarrage des travaux, je pouvais compter sur eux pour répondre à mes questions, adapter les choses si besoin, ou conseiller sur des choix techniques. Cette relation de proximité a vraiment fait la différence.`,
     },
   ],
 };
@@ -324,12 +450,12 @@ export const contactSection: ContactSection = {
   title: "Contactez-nous",
   subtitle: "Parlons de votre projet",
   address: {
-    street: "123 Rue Félix Faure",
-    city: "Dakar",
-    country: "Sénégal",
+    street: "Somone Canda, ",
+    city: "Mbour",
+    country: " Sénégal",
   },
-  phone: "+221 33 123 45 67",
-  email: "contact@senic.sn",
+  phone: "+221 76 487 17 40",
+  email: "senicconsultance@gmail.com",
   formFields: {
     name: {
       label: "Nom",

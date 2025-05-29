@@ -135,10 +135,10 @@ export default function Footer({ data, links, contact }: FooterProps) {
               <div className="flex items-center">
                 <Mail className="h-5 w-5 text-primary mr-3 flex-shrink-0" />
                 <a
-                  href={`mailto:${"data.contactSection.email"}`}
+                  href={`mailto:${contact.email}`}
                   className="text-gray-400 hover:text-white transition-colors duration-300"
                 >
-                  {"data.contactSection.email"}
+                  {contact.email}
                 </a>
               </div>
             </div>
