@@ -150,7 +150,9 @@ export default function Footer({ data, links, contact }: FooterProps) {
 
         {/* Bottom Section - Copyright */}
         <div className="text-center text-gray-500 text-sm">
-          {data.copyright}
+          {/* {data.copyright} */}
+          &copy;2025 <a href="https://kairemor.com">Mor Kaire</a>. Tous droits
+          réservés.
         </div>
       </div>
     </footer>
