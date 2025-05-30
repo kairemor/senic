@@ -67,12 +67,12 @@ function About({ data }: { data: AboutSection }) {
               ))}
             </div>
 
-            <Button
+            {/* <Button
               size="lg"
               className="w-fit bg-primary text-primary-foreground hover:bg-primary/90"
             >
               {data.cta}
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

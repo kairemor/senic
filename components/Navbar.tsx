@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/lib/data";
+import Image from "next/image";
 
 interface NavbarProps {
   links: { href: string; name: string }[];
@@ -49,13 +49,21 @@ export default function Navbar({ links, activeSection }: NavbarProps) {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link href="#home" className="flex items-center">
+          <Link href="#home" className="flex items-center space-x-2">
+            <Image
+              src="https://res.cloudinary.com/kairemor/image/upload/v1748609690/WhatsApp_Image_2025-05-29_at_18.06.06_branmu.jpg"
+              alt="S.E.N.I.C. Logo"
+              width={isScrolled ? 35 : 40} // Adjust size when scrolled
+              height={isScrolled ? 35 : 40} // Adjust size when scrolled
+              className="rounded-full transition-all duration-300"
+            />
+            {/* Optional: Keep text next to logo if desired */}
             <span
-              className={`text-2xl font-bold ${
+              className={`text-xl font-bold ${
                 isScrolled ? "text-gray-800" : "text-white"
               }`}
             >
-              {siteConfig.shortName}
+              S.E.N.I.C.
             </span>
           </Link>
 

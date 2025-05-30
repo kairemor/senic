@@ -74,7 +74,7 @@ export const navigationLinks = [
   { name: "Services", href: "#services" },
   { name: "À Propos", href: "#about" },
   { name: "Témoignages", href: "#testimonials" },
-  { name: "Projets", href: "#projects" },
+  // { name: "Projets", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -133,8 +133,8 @@ qualité et la durabilité.`,
     "https://www.ateliercplusm.com/wp-content/uploads/2020/11/conseil-en-ingenierie-1-scaled.jpeg",
   stats: [
     { value: "3+", label: "Années d'expérience" },
-    { value: "200+", label: "Projets réalisés" },
-    { value: "50+", label: "Experts qualifiés" },
+    { value: "10+", label: "Projets réalisés" },
+    { value: "5+", label: "Experts qualifiés" },
   ],
   cta: "En savoir plus",
 };
