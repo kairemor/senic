@@ -73,8 +73,8 @@ export const navigationLinks = [
   { name: "Accueil", href: "#home" },
   { name: "Services", href: "#services" },
   { name: "À Propos", href: "#about" },
+  { name: "Objectifs", href: "#aims" },
   { name: "Témoignages", href: "#testimonials" },
-  // { name: "Projets", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -384,6 +384,25 @@ export interface FooterSection {
     icon: string;
     url: string;
   }[];
+}
+
+export const aimSection = {
+  title: "Nos Objectifs",
+  description:
+    "Accompagnement du client dans la prise de décision technique et financière tout au long du projet",
+  aims: [
+    "Sécuriser les investissements en assurant que les projets sont techniquement réalisables et financièrement viables.",
+    "Optimiser les ressources en termes de temps, de coût, et de matériaux tout en maintenant la qualité.",
+    "Minimiser les risques techniques et environnementaux grâce à des études approfondies.",
+    "Assurer la conformité avec les normes de construction et de sécurité en vigueur.",
+    "Maximiser la durabilité des projets en intégrant des solutions respectueuses de l’environnement et en optimisant l’utilisation des matériaux et des énergies.",
+  ],
+};
+
+export interface AimSection {
+  title: string;
+  description: string;
+  aims: string[];
 }
 
 export const footerSection: FooterSection = {
