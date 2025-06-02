@@ -10,6 +10,7 @@ import {
   testimonialsSection,
   heroSection2,
   aimSection,
+  projects,
 } from "@/lib/data";
 
 import Hero from "@/components/sections/Hero";
@@ -24,6 +25,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import HeroSection from "@/components/sections/HeroSection";
 import SocialSidebar from "@/components/SocialSidebar";
 import Aims from "@/components/sections/Aim";
+import ProjectsShowcase from "@/components/sections/Projects";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -66,6 +68,7 @@ export default function Home() {
         {/* About Section */}
         <About data={aboutSection} />
         <Aims data={aimSection} />
+        <ProjectsShowcase projects={projects} />
         {/* Testimonial Services Section */}
         <Testimonials data={testimonialsSection} />
         {/* Contact Us Section */}

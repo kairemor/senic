@@ -73,6 +73,7 @@ export const navigationLinks = [
   { name: "Accueil", href: "#home" },
   { name: "Services", href: "#services" },
   { name: "À Propos", href: "#about" },
+  { name: "Projects", href: "#projects" },
   { name: "Objectifs", href: "#aims" },
   { name: "Témoignages", href: "#testimonials" },
   { name: "Contact", href: "#contact" },
@@ -425,6 +426,120 @@ export const footerSection: FooterSection = {
   ],
 };
 
+export const projects = [
+  {
+    id: 1,
+    title: "Villa Moderne Saly",
+    category: "residential",
+    year: 2021,
+    location: "Saly, Sénégal",
+    client: "Entreprise AàZ TRAVAUX",
+    description:
+      "Calcul de structure en béton armé : Fondations en semelles isolées, Poteaux Poutres Planchers en corps creux",
+    tags: ["Béton armé", "Fondations", "Structure"],
+    images: [
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=800&h=600&fit=crop",
+    ],
+    status: "completed",
+  },
+  {
+    id: 2,
+    title: "Complexe Sportif Tawfexul Hady",
+    category: "commercial",
+    year: 2023,
+    location: "Dakar, Sénégal",
+    client: "Entreprise AàZ TRAVAUX",
+    description:
+      "Conception et Dimensionnement de la structure en béton armé. Complexe sportif RDC+5 étages avec aquagym, salles de sport, habitations et restaurant.",
+    tags: ["RDC+5", "Complexe sportif", "Fondations superficielles"],
+    images: [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop",
+    ],
+    status: "completed",
+  },
+  {
+    id: 3,
+    title: "Centre Commercial Almadies",
+    category: "commercial",
+    year: 2024,
+    location: "Almadies, Dakar",
+    client: "Groupe Immobilier Sénégal",
+    description:
+      "Structure en béton armé pour centre commercial de 3 niveaux avec parking souterrain et fondations profondes sur pieux.",
+    tags: ["Béton armé", "Fondations profondes", "Parking souterrain"],
+    images: [
+      "https://images.unsplash.com/photo-1555636222-cae831e670b3?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1556912167-f556f1f39fdf?w=800&h=600&fit=crop",
+    ],
+    status: "in-progress",
+  },
+  {
+    id: 4,
+    title: "Résidence Ngor Gardens",
+    category: "residential",
+    year: 2023,
+    location: "Ngor, Dakar",
+    client: "Promoteur Privé",
+    description:
+      "Ensemble résidentiel de 24 appartements répartis sur 4 bâtiments. Étude complète de structure avec voiles et dalles.",
+    tags: ["Résidentiel", "Voiles béton", "Dalles"],
+    images: [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
+    ],
+    status: "completed",
+  },
+  {
+    id: 5,
+    title: "Pont de Mbour",
+    category: "infrastructure",
+    year: 2022,
+    location: "Mbour, Sénégal",
+    client: "Ministère des Infrastructures",
+    description:
+      "Étude et dimensionnement d'un pont en béton précontraint de 45m de portée avec culées et piles.",
+    tags: ["Béton précontraint", "Pont", "Infrastructure"],
+    images: [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=800&h=600&fit=crop",
+    ],
+    status: "completed",
+  },
+  {
+    id: 6,
+    title: "Hôtel Teranga Resort",
+    category: "commercial",
+    year: 2024,
+    location: "Cap Skirring",
+    client: "Teranga Hospitality",
+    description:
+      "Complexe hôtelier 4 étoiles avec 120 chambres, restaurant, spa et piscines. Structure mixte béton-acier.",
+    tags: ["Hôtel", "Structure mixte", "Complexe touristique"],
+    images: [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&h=600&fit=crop",
+    ],
+    status: "in-progress",
+  },
+];
+
+export interface Project {
+  id: number;
+  title: string;
+  category: string;
+  year: number;
+  location: string;
+  client: string;
+  description: string;
+  tags: string[];
+  images: string[];
+  status: string;
+}
 export interface ContactSection {
   title: string;
   subtitle: string;
