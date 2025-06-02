@@ -429,16 +429,16 @@ export const footerSection: FooterSection = {
 export const projects = [
   {
     id: 1,
-    title: "Villa Moderne Saly",
+    title: "Villa Moderne Yoff",
     category: "residential",
-    year: 2021,
-    location: "Saly, Sénégal",
-    client: "Entreprise AàZ TRAVAUX",
+    year: 2024,
+    location: "Yoff, Sénégal",
+    client: "SCI MAREMA LO",
     description:
-      "Calcul de structure en béton armé : Fondations en semelles isolées, Poteaux Poutres Planchers en corps creux",
+      "Conception et Dimensionnent de la structure en béton armé d’un Immeuble RDC+5 étages+ Terrasse aménagée à Yoff virage. Fondations superficielles sur semelles isolées. Etude validée par le Bureau de contrôle ALPAGES. Septembre novembre 2024",
     tags: ["Béton armé", "Fondations", "Structure"],
     images: [
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop",
+      "https://res.cloudinary.com/kairemor/image/upload/v1748887878/image1_umt4tg.jpg",
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
       "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=800&h=600&fit=crop",
     ],
