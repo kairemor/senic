@@ -514,7 +514,7 @@ export const projects = [
     id: 6,
     title: "Immeuble RDC+2 étages",
     category: "infrastructure",
-    year: 2024,
+    year: 2025,
     location: "Thies, Sénégal",
     client: "M. Saliou Faye",
     description:
@@ -522,7 +522,10 @@ export const projects = [
     tags: ["Hôtel", "Structure mixte", "Complexe touristique"],
     images: [
       "https://res.cloudinary.com/kairemor/image/upload/v1748990631/image5_z4kj0j.png",
-      // "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&h=600&fit=crop",
+      "https://res.cloudinary.com/kairemor/image/upload/v1748992932/WhatsApp_Image_2025-06-03_at_22.18.29_1_xgvttl.jpg",
+      "https://res.cloudinary.com/kairemor/image/upload/v1748992931/WhatsApp_Image_2025-06-03_at_22.18.29_2_yxrgwu.jpg",
+      "https://res.cloudinary.com/kairemor/image/upload/v1748992931/WhatsApp_Image_2025-06-03_at_22.18.29_chrwtx.jpg",
+      "https://res.cloudinary.com/kairemor/image/upload/v1748992931/WhatsApp_Image_2025-06-03_at_22.18.31_duhz70.jpg",
     ],
     status: "completed",
   },
